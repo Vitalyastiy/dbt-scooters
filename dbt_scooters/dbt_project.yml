@@ -1,21 +1,17 @@
-
-name: 'dbt_scooters'
-version: '1.0.0'
-profile: 'dbt_scooters'
-
+name: "dbt_scooters"
+version: "1.0.0"
+profile: "dbt_scooters"
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-
-clean-targets:  
+clean-targets:
   - "target"
   - "dbt_packages"
-
 models:
   dbt_scooters:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +materialized: "table"
+
+
