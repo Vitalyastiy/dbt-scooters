@@ -1,3 +1,8 @@
+cd ~/Desktop/db/dbt_scooters
+source venv/bin/activate
+alias activate_scooters='cd ~/Desktop/db/dbt_scooters && source venv/bin/activate'
+
+
 
 # dbt_scooters
 

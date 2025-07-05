@@ -13,5 +13,3 @@ clean-targets:
 models:
   dbt_scooters:
     +materialized: "table"
-
-
