@@ -1,3 +1,4 @@
+
 select
     t.*,
     u.sex,
@@ -15,6 +16,6 @@ left join
     limit
         75000
 {% else %}
-    where
-        t.id <= 75000
+      where
+          t.id <= 75000
 {% endif %}
