@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "dev_ohwk"."dbt"."event_types" ("type_id" integer,"type" text)
-  ;
+    truncate table "dev_ohwk"."dbt"."event_types";
     -- dbt seed --
     
           insert into "dev_ohwk"."dbt"."event_types" ("type_id", "type") values

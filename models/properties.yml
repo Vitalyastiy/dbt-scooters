@@ -35,8 +35,12 @@ sources:
         description: "Trip finish parking statistics by 10 m hexagons"
       - name: "trips_concurrency"
         description: "Number of simultaneous rides in time"
-
-        
+      - name: "companies"
+        description: "Scooter satistics by company"
+      - name: "companies_trips"
+        description: "Trip satistics by company"
+      - name: "events_stat"
+        description: "Overall user events statistics"
 
 models:
   - name: "trips_prep"
@@ -55,3 +59,7 @@ models:
     description: "Number of simultaneous rides in time"
     config:
       materialized: "incremental"
+  - name: "events_full"
+    description: "User events enriched with meaningful types"
+    config:
+      materialized: "view"
