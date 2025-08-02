@@ -1,0 +1,7 @@
+select
+    company,
+    count(*) as models,
+    sum(scooters) as scooters
+from "dev_ohwk"."dbt"."scooters"
+group by 
+    1

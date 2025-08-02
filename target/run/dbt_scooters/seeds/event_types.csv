@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "dev_ohwk"."dbt"."event_types" ("type_id" integer,"type" text)
+  ;
+    -- dbt seed --
+    
+          insert into "dev_ohwk"."dbt"."event_types" ("type_id", "type") values
+          (%s,%s),(%s,%s),(%s,%s),(%s,%s)
+      
+
+;
+  
