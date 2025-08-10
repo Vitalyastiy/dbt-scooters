@@ -1,7 +1,10 @@
 select
     t.*,
     u.sex,
-    extract(year from t.started_at) - extract(year from u.birth_date) as age
+    extract(year from t.started_at) - extract(year from u.birth_date) as age,
+    
+    now() as updated_at
+
 from
     "dev_ohwk"."dbt"."trips_prep" as t
 left join

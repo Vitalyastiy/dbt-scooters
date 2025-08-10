@@ -44,7 +44,10 @@ cumsum_cte as (
 )
 select
     "timestamp",
-    concurrency
+    concurrency,
+    
+    now() as updated_at
+
 from
     cumsum_cte
 where

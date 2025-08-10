@@ -1,7 +1,9 @@
 select
     sum(price_rub) as revenue_rub,
     "date",
-    now() at time zone 'utc' as updated_at
+    
+    now() as updated_at
+
 from
     "dev_ohwk"."dbt"."trips_prep"
 

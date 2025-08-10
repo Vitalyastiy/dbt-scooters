@@ -1,7 +1,10 @@
 select distinct
     user_id,
     "timestamp",
-    type_id
+    type_id,
+    
+    now() as updated_at
+
 from
     "dev_ohwk"."scooters_raw"."events"
 where
