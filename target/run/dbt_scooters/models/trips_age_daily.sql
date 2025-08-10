@@ -1,13 +1,8 @@
 
-  
+  create view "dev_ohwk"."dbt"."trips_age_daily__dbt_tmp"
     
-
-  create  table "dev_ohwk"."dbt"."trips_age_daily__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     select
     "date",
     age,
@@ -19,4 +14,3 @@ group by
     1,
     2
   );
-  

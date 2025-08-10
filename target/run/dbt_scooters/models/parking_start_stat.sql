@@ -1,13 +1,8 @@
 
-  
+  create view "dev_ohwk"."dbt"."parking_start_stat__dbt_tmp"
     
-
-  create  table "dev_ohwk"."dbt"."parking_start_stat__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     select
     st_transform(hex.geom, 4326) as geom,
     count(*) as trips
@@ -20,4 +15,3 @@ where
 group by
     1
   );
-  

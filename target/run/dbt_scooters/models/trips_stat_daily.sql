@@ -1,13 +1,8 @@
 
-  
+  create view "dev_ohwk"."dbt"."trips_stat_daily__dbt_tmp"
     
-
-  create  table "dev_ohwk"."dbt"."trips_stat_daily__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     select
     date(started_at) as date,
     count(*) as trips,
@@ -20,4 +15,3 @@ group by
 order by
     1
   );
-  
