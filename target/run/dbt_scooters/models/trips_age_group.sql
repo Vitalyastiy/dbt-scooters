@@ -1,8 +1,13 @@
 
-  create view "dev_ohwk"."dbt"."trips_age_group__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "dev_ohwk"."dbt"."trips_age_group__dbt_tmp"
+  
+  
+    as
+  
+  (
     select
     ag."group" as age_group,
     count(*) as trips,
@@ -16,3 +21,4 @@ where
 group by
     1
   );
+  

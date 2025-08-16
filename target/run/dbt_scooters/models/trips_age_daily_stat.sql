@@ -1,8 +1,13 @@
 
-  create view "dev_ohwk"."dbt"."trips_age_daily_stat__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "dev_ohwk"."dbt"."trips_age_daily_stat__dbt_tmp"
+  
+  
+    as
+  
+  (
     select
     age,
     avg(trips) as avg_trips,
@@ -14,3 +19,4 @@ group by
 order by
     1
   );
+  

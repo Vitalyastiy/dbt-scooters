@@ -1,8 +1,13 @@
 
-  create view "dev_ohwk"."dbt"."companies_trips__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "dev_ohwk"."dbt"."companies_trips__dbt_tmp"
+  
+  
+    as
+  
+  (
     with trips_cte as (
     select
         company,
@@ -24,3 +29,4 @@ from
     join "dev_ohwk"."dbt"."companies" as c
         using (company)
   );
+  
