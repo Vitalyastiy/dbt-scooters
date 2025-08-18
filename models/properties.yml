@@ -59,10 +59,8 @@ models:
     description: "User events without duplicates"
     config:
       materialized: "incremental"
-  - name: "trips_concurrency"
-    description: "Number of simultaneous rides in time"
-    config:
-      materialized: "incremental"
+      strategy: "merge"
+      unique_key: [ "user_id", "timestamp", "type_id" ]
   - name: "events_full"
     description: "User events enriched with meaningful types"
     config:
