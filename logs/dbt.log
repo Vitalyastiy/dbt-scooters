@@ -19358,3 +19358,694 @@ where
 [0m10:22:15.928672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114035de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140b82d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140b8050>]}
 [0m10:22:15.928901 [debug] [MainThread]: Flushing usage events
 [0m10:22:16.516379 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:46:10.390012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10546b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d1f9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d1fb10>]}
+
+
+============================== 10:46:10.392126 | 3063be39-dc9f-44c9-a2e1-ac33d071ffc2 ==============================
+[0m10:46:10.392126 [info ] [MainThread]: Running with dbt=1.10.6
+[0m10:46:10.392419 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/flerinvs/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/flerinvs/dbt_scooters/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m10:46:10.435199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3063be39-dc9f-44c9-a2e1-ac33d071ffc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c2b490>]}
+[0m10:46:10.441812 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:46:10.442415 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:46:10.469151 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.109680586, "process_in_blocks": "0", "process_kernel_time": 0.069436, "process_mem_max_rss": "110837760", "process_out_blocks": "0", "process_user_time": 0.534454}
+[0m10:46:10.469423 [debug] [MainThread]: Command `cli deps` succeeded at 10:46:10.469371 after 0.11 seconds
+[0m10:46:10.469605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bc18c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bc2360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ba3650>]}
+[0m10:46:10.469765 [debug] [MainThread]: Flushing usage events
+[0m10:46:10.996411 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:47:48.688981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10477b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063279d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106327b10>]}
+
+
+============================== 10:47:48.691731 | ca93193a-f755-4e72-98b7-91b9fcd41bf0 ==============================
+[0m10:47:48.691731 [info ] [MainThread]: Running with dbt=1.10.6
+[0m10:47:48.692035 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/flerinvs/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/flerinvs/dbt_scooters/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt ', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:47:48.756424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10522f490>]}
+[0m10:47:48.777424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061c2e00>]}
+[0m10:47:48.777832 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m10:47:48.816621 [debug] [MainThread]: checksum: ddc23158f2553d8aa2ca7e3dd2aad24fb10b13ff796468769157e6c86ddce3e7, vars: {}, profile: , target: dev, version: 1.10.6
+[0m10:47:48.854553 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m10:47:48.854793 [debug] [MainThread]: previous checksum: ddc23158f2553d8aa2ca7e3dd2aad24fb10b13ff796468769157e6c86ddce3e7, current checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c
+[0m10:47:48.854971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072f0250>]}
+[0m10:47:49.341472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107418320>]}
+[0m10:47:49.372125 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/flerinvs/dbt_scooters/target/manifest.json
+[0m10:47:49.373532 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/flerinvs/dbt_scooters/target/semantic_manifest.json
+[0m10:47:49.380507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10685fd90>]}
+[0m10:47:49.380722 [info ] [MainThread]: Found 17 models, 3 seeds, 17 sources, 437 macros
+[0m10:47:49.380858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071b5bf0>]}
+[0m10:47:49.381572 [info ] [MainThread]: 
+[0m10:47:49.381703 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:47:49.381812 [info ] [MainThread]: 
+[0m10:47:49.382053 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:47:49.382439 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_ohwk'
+[0m10:47:49.399593 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk"
+[0m10:47:49.399804 [debug] [ThreadPool]: On list_dev_ohwk: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_ohwk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:47:49.399914 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:50.188700 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.788 seconds
+[0m10:47:50.192606 [debug] [ThreadPool]: On list_dev_ohwk: Close
+[0m10:47:50.203244 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_ohwk, now list_dev_ohwk_dbt)
+[0m10:47:50.211072 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk_dbt"
+[0m10:47:50.211559 [debug] [ThreadPool]: On list_dev_ohwk_dbt: BEGIN
+[0m10:47:50.211810 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:47:50.826593 [debug] [ThreadPool]: SQL status: BEGIN in 0.615 seconds
+[0m10:47:50.827218 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk_dbt"
+[0m10:47:50.827573 [debug] [ThreadPool]: On list_dev_ohwk_dbt: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_ohwk_dbt"} */
+select
+      'dev_ohwk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_ohwk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_ohwk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m10:47:50.875458 [debug] [ThreadPool]: SQL status: SELECT 18 in 0.047 seconds
+[0m10:47:50.877440 [debug] [ThreadPool]: On list_dev_ohwk_dbt: ROLLBACK
+[0m10:47:50.922376 [debug] [ThreadPool]: On list_dev_ohwk_dbt: Close
+[0m10:47:50.931436 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:50.931857 [debug] [MainThread]: On master: BEGIN
+[0m10:47:50.932117 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:47:51.569504 [debug] [MainThread]: SQL status: BEGIN in 0.637 seconds
+[0m10:47:51.570459 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:51.571109 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:47:51.810414 [debug] [MainThread]: SQL status: SELECT 4 in 0.239 seconds
+[0m10:47:51.812576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10747ff50>]}
+[0m10:47:51.813212 [debug] [MainThread]: On master: ROLLBACK
+[0m10:47:51.858118 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:51.858616 [debug] [MainThread]: On master: BEGIN
+[0m10:47:51.951190 [debug] [MainThread]: SQL status: BEGIN in 0.092 seconds
+[0m10:47:51.952063 [debug] [MainThread]: On master: COMMIT
+[0m10:47:51.953031 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:51.953534 [debug] [MainThread]: On master: COMMIT
+[0m10:47:52.000700 [debug] [MainThread]: SQL status: COMMIT in 0.047 seconds
+[0m10:47:52.001582 [debug] [MainThread]: On master: Close
+[0m10:47:52.009763 [debug] [Thread-1 (]: Began running node model.dbt_scooters.trips_users
+[0m10:47:52.010500 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt.trips_users ............................. [RUN]
+[0m10:47:52.011223 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_ohwk_dbt, now model.dbt_scooters.trips_users)
+[0m10:47:52.011688 [debug] [Thread-1 (]: Began compiling node model.dbt_scooters.trips_users
+[0m10:47:52.023344 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_scooters.trips_users"
+[0m10:47:52.024799 [debug] [Thread-1 (]: Began executing node model.dbt_scooters.trips_users
+[0m10:47:52.060529 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:52.060827 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+    
+  
+    
+
+  create temporary table "trips_users__dbt_tmp104752046888"
+  
+  
+    as
+  
+  (
+    select
+    t.*,
+    u.sex,
+    extract(year from t.started_at) - extract(year from u.birth_date) as age,
+    
+    now() as updated_at
+
+from
+    "dev_ohwk"."dbt"."trips_prep" as t
+left join
+    "dev_ohwk"."scooters_raw"."users" as u
+    on t.user_id = u.id
+
+    where
+        t.id > (select max(id) from "dev_ohwk"."dbt"."trips_users")
+    order by
+        t.id
+    limit
+        75000
+
+  );
+  
+  
+[0m10:47:52.061012 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:47:52.910185 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.849 seconds
+[0m10:47:52.932704 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:52.933280 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: BEGIN
+[0m10:47:52.979104 [debug] [Thread-1 (]: SQL status: BEGIN in 0.045 seconds
+[0m10:47:52.979986 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:52.980795 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users__dbt_tmp104752046888'
+        
+      order by ordinal_position
+
+  
+[0m10:47:53.311580 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.330 seconds
+[0m10:47:53.324541 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:53.325510 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dev_ohwk".INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users'
+        
+        and table_schema = 'dbt'
+        
+      order by ordinal_position
+
+  
+[0m10:47:53.414661 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.088 seconds
+[0m10:47:53.436697 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:53.437184 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users__dbt_tmp104752046888'
+        
+      order by ordinal_position
+
+  
+[0m10:47:53.528255 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.090 seconds
+[0m10:47:53.544520 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:53.545049 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dev_ohwk".INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users'
+        
+        and table_schema = 'dbt'
+        
+      order by ordinal_position
+
+  
+[0m10:47:53.645222 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.099 seconds
+[0m10:47:53.664456 [debug] [Thread-1 (]: 
+    In "dev_ohwk"."dbt"."trips_users":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m10:47:53.674639 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_scooters.trips_users"
+[0m10:47:53.675515 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:53.675814 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      insert into "dev_ohwk"."dbt"."trips_users" ("id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at")
+    (
+        select "id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at"
+        from "trips_users__dbt_tmp104752046888"
+    )
+
+
+  
+[0m10:47:53.809277 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.133 seconds
+[0m10:47:53.831357 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:53.831853 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+        analyze dbt.trips_users
+      
+[0m10:47:56.413492 [debug] [Thread-1 (]: SQL status: ANALYZE in 2.581 seconds
+[0m10:47:56.415714 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:47:56.416529 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+        vacuum dbt.trips_users
+      
+[0m10:47:56.468786 [debug] [Thread-1 (]: Postgres adapter: Postgres error: VACUUM cannot run inside a transaction block
+
+[0m10:47:56.470329 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: ROLLBACK
+[0m10:47:56.518805 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: Close
+[0m10:47:56.531776 [debug] [Thread-1 (]: Database Error in model trips_users (models/trips_users.sql)
+  VACUUM cannot run inside a transaction block
+  compiled code at target/run/dbt_scooters/models/trips_users.sql
+[0m10:47:56.534460 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca93193a-f755-4e72-98b7-91b9fcd41bf0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ac4260>]}
+[0m10:47:56.535378 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model dbt.trips_users .................... [[31mERROR[0m in 4.52s]
+[0m10:47:56.536086 [debug] [Thread-1 (]: Finished running node model.dbt_scooters.trips_users
+[0m10:47:56.536878 [debug] [Thread-7 (]: Marking all children of 'model.dbt_scooters.trips_users' to be skipped because of status 'error'.  Reason: Database Error in model trips_users (models/trips_users.sql)
+  VACUUM cannot run inside a transaction block
+  compiled code at target/run/dbt_scooters/models/trips_users.sql.
+[0m10:47:56.538666 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:56.538952 [debug] [MainThread]: On master: BEGIN
+[0m10:47:56.539147 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:47:57.362119 [debug] [MainThread]: SQL status: BEGIN in 0.823 seconds
+[0m10:47:57.363156 [debug] [MainThread]: On master: COMMIT
+[0m10:47:57.363752 [debug] [MainThread]: Using postgres connection "master"
+[0m10:47:57.364210 [debug] [MainThread]: On master: COMMIT
+[0m10:47:57.412358 [debug] [MainThread]: SQL status: COMMIT in 0.048 seconds
+[0m10:47:57.413340 [debug] [MainThread]: On master: Close
+[0m10:47:57.414725 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:47:57.415206 [debug] [MainThread]: Connection 'model.dbt_scooters.trips_users' was properly closed.
+[0m10:47:57.416435 [info ] [MainThread]: 
+[0m10:47:57.417741 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 8.03 seconds (8.03s).
+[0m10:47:57.419237 [debug] [MainThread]: Command end result
+[0m10:47:57.450078 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/flerinvs/dbt_scooters/target/manifest.json
+[0m10:47:57.451609 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/flerinvs/dbt_scooters/target/semantic_manifest.json
+[0m10:47:57.455441 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/flerinvs/dbt_scooters/target/run_results.json
+[0m10:47:57.455637 [info ] [MainThread]: 
+[0m10:47:57.455861 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:47:57.456033 [info ] [MainThread]: 
+[0m10:47:57.456312 [error] [MainThread]: [31mFailure in model trips_users (models/trips_users.sql)[0m
+[0m10:47:57.456599 [error] [MainThread]:   Database Error in model trips_users (models/trips_users.sql)
+  VACUUM cannot run inside a transaction block
+  compiled code at target/run/dbt_scooters/models/trips_users.sql
+[0m10:47:57.456788 [info ] [MainThread]: 
+[0m10:47:57.456982 [info ] [MainThread]:   compiled code at target/compiled/dbt_scooters/models/trips_users.sql
+[0m10:47:57.457275 [info ] [MainThread]: 
+[0m10:47:57.457679 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:47:57.459488 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.800601, "process_in_blocks": "0", "process_kernel_time": 0.142115, "process_mem_max_rss": "147521536", "process_out_blocks": "0", "process_user_time": 1.487092}
+[0m10:47:57.459747 [debug] [MainThread]: Command `cli run` failed at 10:47:57.459696 after 8.80 seconds
+[0m10:47:57.459957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a668f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a6c830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078e1e50>]}
+[0m10:47:57.460157 [debug] [MainThread]: Flushing usage events
+[0m10:47:58.177861 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:50:46.583445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10646b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d279d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d27b10>]}
+
+
+============================== 10:50:46.586013 | e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e ==============================
+[0m10:50:46.586013 [info ] [MainThread]: Running with dbt=1.10.6
+[0m10:50:46.586280 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/flerinvs/dbt_scooters/logs', 'profiles_dir': '/Users/flerinvs/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt ', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:50:46.653285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b33490>]}
+[0m10:50:46.673816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ac2e00>]}
+[0m10:50:46.674959 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m10:50:46.712867 [debug] [MainThread]: checksum: ddc23158f2553d8aa2ca7e3dd2aad24fb10b13ff796468769157e6c86ddce3e7, vars: {}, profile: , target: dev, version: 1.10.6
+[0m10:50:46.750721 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m10:50:46.750951 [debug] [MainThread]: previous checksum: ddc23158f2553d8aa2ca7e3dd2aad24fb10b13ff796468769157e6c86ddce3e7, current checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c
+[0m10:50:46.751101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109fc250>]}
+[0m10:50:47.227871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b29400>]}
+[0m10:50:47.258341 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/flerinvs/dbt_scooters/target/manifest.json
+[0m10:50:47.259533 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/flerinvs/dbt_scooters/target/semantic_manifest.json
+[0m10:50:47.269677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110dec210>]}
+[0m10:50:47.269906 [info ] [MainThread]: Found 17 models, 3 seeds, 17 sources, 437 macros
+[0m10:50:47.270046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108a76c0>]}
+[0m10:50:47.270785 [info ] [MainThread]: 
+[0m10:50:47.270924 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:50:47.271056 [info ] [MainThread]: 
+[0m10:50:47.271294 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:50:47.271673 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_ohwk'
+[0m10:50:47.293081 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk"
+[0m10:50:47.293279 [debug] [ThreadPool]: On list_dev_ohwk: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_ohwk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:50:47.293385 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:50:47.937906 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.644 seconds
+[0m10:50:47.941086 [debug] [ThreadPool]: On list_dev_ohwk: Close
+[0m10:50:47.950891 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_ohwk, now list_dev_ohwk_dbt)
+[0m10:50:47.958651 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk_dbt"
+[0m10:50:47.959228 [debug] [ThreadPool]: On list_dev_ohwk_dbt: BEGIN
+[0m10:50:47.959479 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:50:48.577432 [debug] [ThreadPool]: SQL status: BEGIN in 0.618 seconds
+[0m10:50:48.577945 [debug] [ThreadPool]: Using postgres connection "list_dev_ohwk_dbt"
+[0m10:50:48.578300 [debug] [ThreadPool]: On list_dev_ohwk_dbt: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_ohwk_dbt"} */
+select
+      'dev_ohwk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_ohwk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_ohwk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m10:50:48.628135 [debug] [ThreadPool]: SQL status: SELECT 18 in 0.049 seconds
+[0m10:50:48.631391 [debug] [ThreadPool]: On list_dev_ohwk_dbt: ROLLBACK
+[0m10:50:48.679263 [debug] [ThreadPool]: On list_dev_ohwk_dbt: Close
+[0m10:50:48.690045 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:48.690460 [debug] [MainThread]: On master: BEGIN
+[0m10:50:48.690719 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:50:49.432899 [debug] [MainThread]: SQL status: BEGIN in 0.742 seconds
+[0m10:50:49.433618 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:49.434129 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:50:49.615963 [debug] [MainThread]: SQL status: SELECT 4 in 0.181 seconds
+[0m10:50:49.619688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b93f50>]}
+[0m10:50:49.620607 [debug] [MainThread]: On master: ROLLBACK
+[0m10:50:49.667166 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:49.668107 [debug] [MainThread]: On master: BEGIN
+[0m10:50:49.907979 [debug] [MainThread]: SQL status: BEGIN in 0.239 seconds
+[0m10:50:49.909014 [debug] [MainThread]: On master: COMMIT
+[0m10:50:49.909416 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:49.909678 [debug] [MainThread]: On master: COMMIT
+[0m10:50:49.955398 [debug] [MainThread]: SQL status: COMMIT in 0.045 seconds
+[0m10:50:49.956239 [debug] [MainThread]: On master: Close
+[0m10:50:49.962875 [debug] [Thread-1 (]: Began running node model.dbt_scooters.trips_users
+[0m10:50:49.963982 [info ] [Thread-1 (]: 1 of 1 START sql incremental model dbt.trips_users ............................. [RUN]
+[0m10:50:49.964834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_ohwk_dbt, now model.dbt_scooters.trips_users)
+[0m10:50:49.965781 [debug] [Thread-1 (]: Began compiling node model.dbt_scooters.trips_users
+[0m10:50:49.977504 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_scooters.trips_users"
+[0m10:50:49.978849 [debug] [Thread-1 (]: Began executing node model.dbt_scooters.trips_users
+[0m10:50:50.015324 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:50.015734 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+    
+  
+    
+
+  create temporary table "trips_users__dbt_tmp105050002183"
+  
+  
+    as
+  
+  (
+    select
+    t.*,
+    u.sex,
+    extract(year from t.started_at) - extract(year from u.birth_date) as age,
+    
+    now() as updated_at
+
+from
+    "dev_ohwk"."dbt"."trips_prep" as t
+left join
+    "dev_ohwk"."scooters_raw"."users" as u
+    on t.user_id = u.id
+
+    where
+        t.id > (select max(id) from "dev_ohwk"."dbt"."trips_users")
+    order by
+        t.id
+    limit
+        75000
+
+  );
+  
+  
+[0m10:50:50.015925 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:50:51.716222 [debug] [Thread-1 (]: SQL status: SELECT 0 in 1.700 seconds
+[0m10:50:51.736692 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:51.737295 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: BEGIN
+[0m10:50:51.784211 [debug] [Thread-1 (]: SQL status: BEGIN in 0.046 seconds
+[0m10:50:51.785006 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:51.785514 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users__dbt_tmp105050002183'
+        
+      order by ordinal_position
+
+  
+[0m10:50:51.846172 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.060 seconds
+[0m10:50:51.856557 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:51.857496 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dev_ohwk".INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users'
+        
+        and table_schema = 'dbt'
+        
+      order by ordinal_position
+
+  
+[0m10:50:51.908486 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.050 seconds
+[0m10:50:51.925915 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:51.926513 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users__dbt_tmp105050002183'
+        
+      order by ordinal_position
+
+  
+[0m10:50:51.975894 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.049 seconds
+[0m10:50:51.986147 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:51.986762 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dev_ohwk".INFORMATION_SCHEMA.columns
+      where table_name = 'trips_users'
+        
+        and table_schema = 'dbt'
+        
+      order by ordinal_position
+
+  
+[0m10:50:52.037173 [debug] [Thread-1 (]: SQL status: SELECT 17 in 0.050 seconds
+[0m10:50:52.051673 [debug] [Thread-1 (]: 
+    In "dev_ohwk"."dbt"."trips_users":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m10:50:52.061501 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_scooters.trips_users"
+[0m10:50:52.062344 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:52.062663 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+      insert into "dev_ohwk"."dbt"."trips_users" ("id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at")
+    (
+        select "id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at"
+        from "trips_users__dbt_tmp105050002183"
+    )
+
+
+  
+[0m10:50:52.110414 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.047 seconds
+[0m10:50:52.124759 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:52.125069 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+        analyze dbt.trips_users
+      
+[0m10:50:55.329301 [debug] [Thread-1 (]: SQL status: ANALYZE in 3.204 seconds
+[0m10:50:55.331338 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: COMMIT
+[0m10:50:55.332253 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:55.332902 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: COMMIT
+[0m10:50:55.382837 [debug] [Thread-1 (]: SQL status: COMMIT in 0.049 seconds
+[0m10:50:55.384257 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:55.384883 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+        commit;
+      
+[0m10:50:55.436763 [debug] [Thread-1 (]: SQL status: COMMIT in 0.051 seconds
+[0m10:50:55.438770 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.trips_users"
+[0m10:50:55.439269 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.trips_users"} */
+
+        vacuum dbt.trips_users
+      
+[0m10:50:55.488147 [debug] [Thread-1 (]: SQL status: VACUUM in 0.048 seconds
+[0m10:50:55.493817 [debug] [Thread-1 (]: On model.dbt_scooters.trips_users: Close
+[0m10:50:55.498355 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1cf4c2d-988d-4a4b-89ee-b56e4a86c40e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110dff1d0>]}
+[0m10:50:55.499646 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model dbt.trips_users ........................ [[32mINSERT 0 0[0m in 5.53s]
+[0m10:50:55.500350 [debug] [Thread-1 (]: Finished running node model.dbt_scooters.trips_users
+[0m10:50:55.502280 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:55.502728 [debug] [MainThread]: On master: BEGIN
+[0m10:50:55.503002 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:50:57.004339 [debug] [MainThread]: SQL status: BEGIN in 1.501 seconds
+[0m10:50:57.005331 [debug] [MainThread]: On master: COMMIT
+[0m10:50:57.005930 [debug] [MainThread]: Using postgres connection "master"
+[0m10:50:57.006395 [debug] [MainThread]: On master: COMMIT
+[0m10:50:57.050744 [debug] [MainThread]: SQL status: COMMIT in 0.044 seconds
+[0m10:50:57.051656 [debug] [MainThread]: On master: Close
+[0m10:50:57.053063 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:50:57.053651 [debug] [MainThread]: Connection 'model.dbt_scooters.trips_users' was properly closed.
+[0m10:50:57.054219 [info ] [MainThread]: 
+[0m10:50:57.054805 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 9.78 seconds (9.78s).
+[0m10:50:57.055860 [debug] [MainThread]: Command end result
+[0m10:50:57.086726 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/flerinvs/dbt_scooters/target/manifest.json
+[0m10:50:57.088192 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/flerinvs/dbt_scooters/target/semantic_manifest.json
+[0m10:50:57.091915 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/flerinvs/dbt_scooters/target/run_results.json
+[0m10:50:57.092116 [info ] [MainThread]: 
+[0m10:50:57.092341 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:50:57.092503 [info ] [MainThread]: 
+[0m10:50:57.092757 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:50:57.094683 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 10.541242, "process_in_blocks": "0", "process_kernel_time": 0.153258, "process_mem_max_rss": "147308544", "process_out_blocks": "0", "process_user_time": 1.467967}
+[0m10:50:57.095010 [debug] [MainThread]: Command `cli run` succeeded at 10:50:57.094948 after 10.54 seconds
+[0m10:50:57.095244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110de0870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118bea80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d877d0>]}
+[0m10:50:57.095461 [debug] [MainThread]: Flushing usage events
+[0m10:50:57.597496 [debug] [MainThread]: An error was encountered while trying to flush usage events
