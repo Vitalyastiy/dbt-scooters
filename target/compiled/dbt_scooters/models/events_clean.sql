@@ -11,5 +11,5 @@ from
 where
 
     
-        date("timestamp") = date '2023-06-01'
+        "timestamp" > (select max("timestamp") from "dev_ohwk"."dbt"."events_clean")
     

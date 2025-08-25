@@ -1,8 +1,13 @@
 
-  create view "dev_ohwk"."dbt"."trips_geom__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "dev_ohwk"."dbt"."trips_geom__dbt_tmp"
+  
+  
+    as
+  
+  (
     select
     id,
     st_setsrid(st_makepoint(start_lon, start_lat), 4326) as start_point,
@@ -10,3 +15,4 @@
 from
     "dev_ohwk"."scooters_raw"."trips"
   );
+  

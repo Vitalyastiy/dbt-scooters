@@ -69,11 +69,3 @@ models:
     description: "User events enriched with meaningful types"
     config:
       materialized: "view"
-  - name: "revenue_daily"
-    description: "Summary daily revenue"
-    config:
-      materialized: "incremental"
-      strategy: "merge"
-      unique_key: [ "date" ]
-      on_schema_change: "append_new_columns"
-      full_refresh: false

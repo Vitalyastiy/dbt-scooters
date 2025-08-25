@@ -1,8 +1,13 @@
 
-  create view "dev_ohwk"."dbt"."companies__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "dev_ohwk"."dbt"."companies__dbt_tmp"
+  
+  
+    as
+  
+  (
     select
     company,
     count(*) as models,
@@ -12,3 +17,4 @@ from
 group by
     1
   );
+  

@@ -17,20 +17,10 @@ sum_cte as (
         unnest_cte
     where
     
-        "timestamp" > (select max("timestamp") from "dev_ohwk"."dbt"."trips_concurrency")
+        "timestamp" < (date '2023-06-01' + interval '7' hour) at time zone 'Europe/Moscow'
     
     group by
         1
-    
-    union all
-    select
-        "timestamp",
-        concurrency as increment,
-        false as preserve_row
-    from
-        "dev_ohwk"."dbt"."trips_concurrency"
-    where
-        "timestamp" = (select max("timestamp") from "dev_ohwk"."dbt"."trips_concurrency")
     
 ),
 cumsum_cte as (
