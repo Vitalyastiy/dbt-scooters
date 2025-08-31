@@ -4,9 +4,17 @@ sources:
   - name: "scooters_raw"
     description: "Raw data provided by scooters service"
     loader: "https://t.me/inzhenerka_dbt_bot"
-    tables:
+    tables:  
       - name: "trips"
         description: "Scooter trips"
+        loaded_at_field: "finished_at"
+        freshness:
+          warn_after:
+            count: 1
+            period: "day"
+          error_after:
+            count: 3650
+            period: "day"
       - name: "users"
         description: "Users of scooter service"
       - name: "events"
@@ -69,3 +77,4 @@ models:
     description: "User events enriched with meaningful types"
     config:
       materialized: "view"
+

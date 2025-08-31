@@ -1,10 +1,10 @@
 
     
     
-    truncate table "dev_ohwk"."dbt"."scooters";
+    truncate table "dev_o0af"."dbt"."scooters";
     -- dbt seed --
     
-          insert into "dev_ohwk"."dbt"."scooters" ("company", "model", "hardware_id", "scooters") values
+          insert into "dev_o0af"."dbt"."scooters" ("company", "model", "hardware_id", "scooters") values
           (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
       
 

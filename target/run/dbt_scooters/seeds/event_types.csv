@@ -1,10 +1,10 @@
 
     
     
-    truncate table "dev_ohwk"."dbt"."event_types";
+    truncate table "dev_o0af"."dbt"."event_types";
     -- dbt seed --
     
-          insert into "dev_ohwk"."dbt"."event_types" ("type_id", "type") values
+          insert into "dev_o0af"."dbt"."event_types" ("type_id", "type") values
           (%s,%s),(%s,%s),(%s,%s),(%s,%s)
       
 

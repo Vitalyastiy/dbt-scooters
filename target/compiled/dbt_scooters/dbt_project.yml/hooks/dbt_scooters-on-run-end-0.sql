@@ -1,1 +1,1 @@
-grant usage on schema dbt_finance to finance;
+grant usage on schema finance to finance;

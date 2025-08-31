@@ -4,7 +4,7 @@ select
     count(*) as trips,
     sum(price_rub) as revenue_rub
 from
-    "dev_ohwk"."dbt"."trips_users"
+    "dev_o0af"."dbt"."trips_users"
 group by
     1,
     2

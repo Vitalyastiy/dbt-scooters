@@ -7,9 +7,9 @@ select distinct
     now() as updated_at
 
 from
-    "dev_ohwk"."scooters_raw"."events"
+    "dev_o0af"."scooters_raw"."events"
 where
 
     
-        "timestamp" > (select max("timestamp") from "dev_ohwk"."dbt"."events_clean")
+        "timestamp" > (select max("timestamp") from "dev_o0af"."dbt"."events_clean")
     

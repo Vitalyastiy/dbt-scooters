@@ -1,10 +1,10 @@
 
     
     
-    truncate table "dev_ohwk"."dbt"."age_groups";
+    truncate table "dev_o0af"."dbt"."age_groups";
     -- dbt seed --
     
-          insert into "dev_ohwk"."dbt"."age_groups" ("group", "age_start", "age_end") values
+          insert into "dev_o0af"."dbt"."age_groups" ("group", "age_start", "age_end") values
           (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
       
 

@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_ohwk"."dbt"."trips_geom__dbt_tmp"
+  create  table "dev_o0af"."dbt"."trips_geom__dbt_tmp"
   
   
     as
@@ -13,6 +13,6 @@
     st_setsrid(st_makepoint(start_lon, start_lat), 4326) as start_point,
     st_setsrid(st_makepoint(finish_lon, finish_lat), 4326) as finish_point
 from
-    "dev_ohwk"."scooters_raw"."trips"
+    "dev_o0af"."scooters_raw"."trips"
   );
   

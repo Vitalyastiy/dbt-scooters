@@ -3,4 +3,4 @@ select count(id) trips, count(distinct user_id) users
 , sum(distance_m) / 1000 as sum_distance_km
 , sum(price_rub) revenue_rub
 , count(is_free or null) / cast(count(*) as real) * 100 as free_trips_pct
-from "dev_ohwk"."dbt"."trips_prep"
+from "dev_o0af"."dbt"."trips_prep"

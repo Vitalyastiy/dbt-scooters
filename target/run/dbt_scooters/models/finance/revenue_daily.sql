@@ -1,16 +1,28 @@
 
       
-        delete from "dev_ohwk"."dbt_finance"."revenue_daily" as DBT_INTERNAL_DEST
-        where (date) in (
-            select distinct date
-            from "revenue_daily__dbt_tmp182234266710" as DBT_INTERNAL_SOURCE
-        );
-
+  
     
 
-    insert into "dev_ohwk"."dbt_finance"."revenue_daily" ("revenue_rub", "date", "updated_at")
-    (
-        select "revenue_rub", "date", "updated_at"
-        from "revenue_daily__dbt_tmp182234266710"
-    )
+  create  table "dev_o0af"."finance"."revenue_daily"
+  
+  
+    as
+  
+  (
+    select
+    sum(price_rub) as revenue_rub,
+    "date",
+    
+    now() as updated_at
+
+from
+    "dev_o0af"."dbt"."trips_prep"
+
+group by
+    2,
+    3
+order by
+    2
+  );
+  
   

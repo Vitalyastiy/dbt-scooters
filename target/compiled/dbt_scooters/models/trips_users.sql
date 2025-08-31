@@ -6,13 +6,13 @@ select
     now() as updated_at
 
 from
-    "dev_ohwk"."dbt"."trips_prep" as t
+    "dev_o0af"."dbt"."trips_prep" as t
 left join
-    "dev_ohwk"."scooters_raw"."users" as u
+    "dev_o0af"."scooters_raw"."users" as u
     on t.user_id = u.id
 
     where
-        t.id > (select max(id) from "dev_ohwk"."dbt"."trips_users")
+        t.id > (select max(id) from "dev_o0af"."dbt"."trips_users")
     order by
         t.id
     limit

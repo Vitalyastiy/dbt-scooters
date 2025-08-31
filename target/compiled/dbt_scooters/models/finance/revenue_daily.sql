@@ -5,10 +5,7 @@ select
     now() as updated_at
 
 from
-    "dev_ohwk"."dbt"."trips_prep"
-
-where
-    "date" >= (select max("date") - interval '2' day from "dev_ohwk"."dbt_finance"."revenue_daily")
+    "dev_o0af"."dbt"."trips_prep"
 
 group by
     2,
