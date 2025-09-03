@@ -7,6 +7,9 @@ select
 from
     "dev_o0af"."dbt"."trips_prep"
 
+where
+    "date" >= (select max("date") - interval '2' day from "dev_o0af"."finance"."revenue_daily")
+
 group by
     2,
     3
