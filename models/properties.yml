@@ -15,6 +15,14 @@ sources:
           error_after:
             count: 3650
             period: "day"
+        columns:
+          - name: "user_id"
+            description: "User identifier"
+            data_tests:
+              - not_null
+              - relationships:
+                    to: "source('scooters_raw', 'users')"
+                    field: "id"
       - name: "users"
         description: "Users of scooter service"
         columns:

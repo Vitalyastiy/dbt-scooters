@@ -5,7 +5,7 @@ unnest_cte as (
         unnest(array[started_at, finished_at]) as "timestamp",
         unnest(array[1, -1]) as increment
     from
-        "dev_o0af"."scooters_raw"."trips"
+        "dev_h8qz"."scooters_raw"."trips"
 ),
 sum_cte as (
     -- Make timestamp unique, group increments, add initial concurrency from history

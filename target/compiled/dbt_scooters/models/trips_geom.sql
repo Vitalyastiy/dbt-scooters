@@ -3,4 +3,4 @@ select
     st_setsrid(st_makepoint(start_lon, start_lat), 4326) as start_point,
     st_setsrid(st_makepoint(finish_lon, finish_lat), 4326) as finish_point
 from
-    "dev_o0af"."scooters_raw"."trips"
+    "dev_h8qz"."scooters_raw"."trips"

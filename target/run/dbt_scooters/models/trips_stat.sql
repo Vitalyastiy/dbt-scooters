@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_o0af"."dbt"."trips_stat__dbt_tmp"
+  create  table "dev_h8qz"."dbt"."trips_stat__dbt_tmp"
   
   
     as
@@ -13,6 +13,6 @@
 , sum(distance_m) / 1000 as sum_distance_km
 , sum(price_rub) revenue_rub
 , count(is_free or null) / cast(count(*) as real) * 100 as free_trips_pct
-from "dev_o0af"."dbt"."trips_prep"
+from "dev_h8qz"."dbt"."trips_prep"
   );
   

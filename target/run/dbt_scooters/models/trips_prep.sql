@@ -1,5 +1,5 @@
 
-  create view "dev_o0af"."dbt"."trips_prep__dbt_tmp"
+  create view "dev_h8qz"."dbt"."trips_prep__dbt_tmp"
     
     
   as (
@@ -20,5 +20,5 @@ finished_at <> started_at and price = 0 as is_free,
     date(started_at at time zone 'Europe/Moscow')
  as "date" 
 from
-"dev_o0af"."scooters_raw"."trips"
+"dev_h8qz"."scooters_raw"."trips"
   );

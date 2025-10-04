@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_o0af"."dbt"."trips_stat_daily__dbt_tmp"
+  create  table "dev_h8qz"."dbt"."trips_stat_daily__dbt_tmp"
   
   
     as

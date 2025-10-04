@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_o0af"."dbt"."companies__dbt_tmp"
+  create  table "dev_h8qz"."dbt"."companies__dbt_tmp"
   
   
     as
@@ -13,7 +13,7 @@
     count(*) as models,
     sum(scooters) as scooters
 from
-    "dev_o0af"."dbt"."scooters"
+    "dev_h8qz"."dbt"."scooters"
 group by
     1
   );
