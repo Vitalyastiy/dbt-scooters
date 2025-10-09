@@ -8,7 +8,7 @@ from
     "dev_h8qz"."dbt"."trips_prep"
 
 where
-    "date" >= (select max("date") - interval '2' day from "dev_h8qz"."finance"."revenue_daily")
+    "date" >= (select max("date") - interval '2' day from "dev_h8qz"."dbt"."revenue_daily")
 
 group by
     2,

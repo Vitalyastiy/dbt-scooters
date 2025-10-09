@@ -15,8 +15,16 @@ Try running the following commands:
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
 
 
-Примеры команд: 
 
+Примеры команд: 
+# Открыть в стандартном текстовом редакторе Mac
+open ~/.dbt/profiles.yml
+
+https://t.me/inzhenerka_dbt_bot - External Database URL
+
+cd ~/dbt_scooters
+
+ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка соедения
 - `create extension postgis schema public` - для гео
 - `create role finance nologin;` - создать фин. роль
 
@@ -24,7 +32,9 @@ Try running the following commands:
 - `dbt build` - запускает модели и тесты
 - `nano ~/.dbt/profiles.yml` - открыть файл, для подмены серктов
 - `dbt run-operation create_role --args "name: finance"` - создание роли в базе (на примере роли "finance")
-- `dbt source freshness` - проыерка свежести
+- `dbt source freshness` - проверка свежести
+- `dbt test -s age_groups` - запуск теста
+
 
 ## Основные команды dbt
 

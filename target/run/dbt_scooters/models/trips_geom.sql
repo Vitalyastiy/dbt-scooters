@@ -1,13 +1,8 @@
 
-  
+  create view "dev_h8qz"."dbt"."trips_geom__dbt_tmp"
     
-
-  create  table "dev_h8qz"."dbt"."trips_geom__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     select
     id,
     st_setsrid(st_makepoint(start_lon, start_lat), 4326) as start_point,
@@ -15,4 +10,3 @@
 from
     "dev_h8qz"."scooters_raw"."trips"
   );
-  

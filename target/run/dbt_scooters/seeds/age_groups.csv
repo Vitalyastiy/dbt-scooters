@@ -1,7 +1,9 @@
 
     
     
-    truncate table "dev_h8qz"."dbt"."age_groups";
+    
+    create table "dev_h8qz"."dbt"."age_groups" ("group" text,"age_start" integer,"age_end" integer)
+  ;
     -- dbt seed --
     
           insert into "dev_h8qz"."dbt"."age_groups" ("group", "age_start", "age_end") values

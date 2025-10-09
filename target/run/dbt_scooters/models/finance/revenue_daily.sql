@@ -1,16 +1,16 @@
 
       
-        delete from "dev_h8qz"."finance"."revenue_daily" as DBT_INTERNAL_DEST
+        delete from "dev_h8qz"."dbt"."revenue_daily" as DBT_INTERNAL_DEST
         where (date) in (
             select distinct date
-            from "revenue_daily__dbt_tmp190052631779" as DBT_INTERNAL_SOURCE
+            from "revenue_daily__dbt_tmp203407182584" as DBT_INTERNAL_SOURCE
         );
 
     
 
-    insert into "dev_h8qz"."finance"."revenue_daily" ("revenue_rub", "date", "updated_at")
+    insert into "dev_h8qz"."dbt"."revenue_daily" ("revenue_rub", "date", "updated_at")
     (
         select "revenue_rub", "date", "updated_at"
-        from "revenue_daily__dbt_tmp190052631779"
+        from "revenue_daily__dbt_tmp203407182584"
     )
   
