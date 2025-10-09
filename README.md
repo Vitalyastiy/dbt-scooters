@@ -28,6 +28,10 @@ ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка
 - `create extension postgis schema public` - для гео
 - `create role finance nologin;` - создать фин. роль
 
+- dbt docs generate
+- dbt docs serve
+
+
 - `dbt run` - запускает только модели
 - `dbt build` - запускает модели и тесты
 - `nano ~/.dbt/profiles.yml` - открыть файл, для подмены серктов
