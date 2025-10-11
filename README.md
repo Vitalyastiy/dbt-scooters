@@ -19,6 +19,7 @@ Try running the following commands:
 Примеры команд: 
 # Открыть в стандартном текстовом редакторе Mac
 open ~/.dbt/profiles.yml
+cat ~/.dbt/profiles.yml
 
 https://t.me/inzhenerka_dbt_bot - External Database URL
 
@@ -27,6 +28,8 @@ cd ~/dbt_scooters
 ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка соедения
 - `create extension postgis schema public` - для гео
 - `create role finance nologin;` - создать фин. роль
+
+
 
 - dbt docs generate
 - dbt docs serve
