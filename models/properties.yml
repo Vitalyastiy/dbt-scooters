@@ -78,10 +78,8 @@ models:
       - unique_key:
             columns: [ "date", "age" ]
 
-  # - name: "events_clean"
-  #   description: "User events without duplicates"
-  - name: "trips_prep"
-    description: "Overall trips statistics"
+
+ 
   - name: "trips_stat_daily"
     description: "Overall trips statistics per day"
     config:
@@ -108,3 +106,7 @@ models:
     description: "Scooter satistics by company"
   # - name: "revenue_daily"
   #   description: "Summary daily revenue"
+    # - name: "events_clean"
+  #   description: "User events without duplicates"
+  #  - name: "trips_prep"
+  #   description: "Overall trips statistics"

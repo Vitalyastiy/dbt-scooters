@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "dev_h8qz"."dbt"."scooters" ("company" text,"model" text,"hardware_id" text,"scooters" integer)
-  ;
+    truncate table "dev_h8qz"."dbt"."scooters";
     -- dbt seed --
     
           insert into "dev_h8qz"."dbt"."scooters" ("company", "model", "hardware_id", "scooters") values
