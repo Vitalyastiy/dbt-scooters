@@ -55,3 +55,9 @@ ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка
 - `dbt source freshness` - проверка актуальности данных в источниках
 - `dbt docs generate` - генерирует документацию проекта
 - `dbt docs serve` - запускает локальный сервер для просмотра документации
+
+
+## Каталог данных
+
+Каталог dbt, который автоматически обновляется из ветки `main`:
+https://vitalyastiy.github.io/dbt-scooters/
