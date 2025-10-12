@@ -38,6 +38,11 @@ sources:
                     severity: "warn"
       - name: "events"
         description: "Raw user events with duplicates"
+
+
+
+
+
       
 
 models:
@@ -110,3 +115,16 @@ models:
   #   description: "User events without duplicates"
   #  - name: "trips_prep"
   #   description: "Overall trips statistics"
+
+
+
+  - name: "sex_age_pivot"
+    description: "Trips per age grouped by sex"
+    data_tests:
+      - unique_key:
+          columns: [ "age" ]
+    columns:
+      - name: "age"
+        description: "Numerical age of user"
+        data_tests:
+          - "dbt_utils.not_constant"
