@@ -28,7 +28,7 @@ cd ~/dbt_scooters
 ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка соедения
 - `create extension postgis schema public` - для гео
 - `create role finance nologin;` - создать фин. роль
-
+- `dbt show -s events_stream` - вывести резулттат эфемерной модели модель 
 
 
 - dbt docs generate
