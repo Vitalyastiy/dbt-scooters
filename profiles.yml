@@ -13,18 +13,3 @@ dbt_scooters:
 
 
 
-
-floppa:
-  outputs:
-    sandbox:
-      type: trino
-      host: floppa.m2.ru
-      http_scheme: https
-      method: oauth_console
-      port: 443
-      database: iceberg
-      schema: golden
-      user: "flerinvs@m2.ru"
-      password: "MegaFon19922605!!!"
-      threads: 8
-  target: sandbox
