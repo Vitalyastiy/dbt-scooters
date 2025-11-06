@@ -11,5 +11,9 @@ left join
     "dev_m0z9"."scooters_raw"."users" as u
     on t.user_id = u.id
 
-      where
-          t.id <= 75000
+    where
+        t.id > (select max(id) from "dev_m0z9"."dbt"."trips_users")
+    order by
+        t.id
+    limit
+        75000

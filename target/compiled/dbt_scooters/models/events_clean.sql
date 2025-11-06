@@ -10,4 +10,6 @@ from
     "dev_m0z9"."scooters_raw"."events"
 where
 
-    "timestamp" < timestamp '2023-08-01'
+    
+        "timestamp" > (select max("timestamp") from "dev_m0z9"."dbt"."events_clean")
+    

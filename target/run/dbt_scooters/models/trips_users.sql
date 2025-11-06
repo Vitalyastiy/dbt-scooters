@@ -1,30 +1,9 @@
 
-      
-  
-    
+      insert into "dev_m0z9"."dbt"."trips_users" ("id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at")
+    (
+        select "id", "user_id", "scooter_hw_id", "started_at", "finished_at", "start_lat", "start_lon", "finish_lat", "finish_lon", "distance_m", "price_rub", "duration_s", "is_free", "date", "sex", "age", "updated_at"
+        from "trips_users__dbt_tmp100820510740"
+    )
 
-  create  table "dev_m0z9"."dbt"."trips_users"
-  
-  
-    as
-  
-  (
-    select
-    t.*,
-    u.sex,
-    extract(year from t.started_at) - extract(year from u.birth_date) as age,
-    
-    now() as updated_at
 
-from
-    "dev_m0z9"."dbt"."trips_prep" as t
-left join
-    "dev_m0z9"."scooters_raw"."users" as u
-    on t.user_id = u.id
-
-      where
-          t.id <= 75000
-
-  );
-  
   
