@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_h8qz"."dbt"."events_stat__dbt_tmp"
+  create  table "dev_m0z9"."dbt"."events_stat__dbt_tmp"
   
   
     as
@@ -13,6 +13,6 @@
       / cast(count("type" = 'start_search' or null) as float)
       * 100 as cancel_pct
 from
-    "dev_h8qz"."dbt"."events_full"
+    "dev_m0z9"."dbt"."events_full"
   );
   

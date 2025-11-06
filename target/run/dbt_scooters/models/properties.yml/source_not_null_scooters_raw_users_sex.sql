@@ -13,7 +13,7 @@
 
 
 select sex
-from "dev_h8qz"."scooters_raw"."users"
+from "dev_m0z9"."scooters_raw"."users"
 where sex is null
 
 

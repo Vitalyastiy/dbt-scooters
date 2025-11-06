@@ -6,14 +6,10 @@ select
     now() as updated_at
 
 from
-    "dev_h8qz"."dbt"."trips_prep" as t
+    "dev_m0z9"."dbt"."trips_prep" as t
 left join
-    "dev_h8qz"."scooters_raw"."users" as u
+    "dev_m0z9"."scooters_raw"."users" as u
     on t.user_id = u.id
 
-    where
-        t.id > (select max(id) from "dev_h8qz"."dbt"."trips_users")
-    order by
-        t.id
-    limit
-        75000
+      where
+          t.id <= 75000

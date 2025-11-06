@@ -5,7 +5,7 @@
 
 
 select user_id
-from "dev_h8qz"."scooters_raw"."trips"
+from "dev_m0z9"."scooters_raw"."trips"
 where user_id is null
 
 

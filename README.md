@@ -1,3 +1,6 @@
+https://dashboard.render.com/d/dpg-d44vvmre5dus73fdri70-a
+
+
 Welcome to your new dbt project!
 
 ### Using the starter project
@@ -28,7 +31,9 @@ cd ~/dbt_scooters
 ping dpg-d3gjbph5pdvs73eilg50-a.frankfurt-postgres.render.com - проверка соедения
 - `create extension postgis schema public` - для гео
 - `create role finance nologin;` - создать фин. роль
-- `dbt show -s events_stream` - вывести резулттат эфемерной модели модель 
+- `CREATE SCHEMA finance;` - создать схему
+
+- `dbt show -s events_stream` - вывести резулттат эфемерной модел модель 
 
 
 - dbt docs generate

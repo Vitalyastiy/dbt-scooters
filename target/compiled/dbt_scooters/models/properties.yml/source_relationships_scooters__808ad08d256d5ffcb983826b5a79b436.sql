@@ -4,13 +4,13 @@
 
 with child as (
     select user_id as from_field
-    from "dev_h8qz"."scooters_raw"."trips"
+    from "dev_m0z9"."scooters_raw"."trips"
     where user_id is not null
 ),
 
 parent as (
     select id as to_field
-    from "dev_h8qz"."scooters_raw"."users"
+    from "dev_m0z9"."scooters_raw"."users"
 )
 
 select

@@ -8,7 +8,7 @@ with all_values as (
         sex as value_field,
         count(*) as n_records
 
-    from "dev_h8qz"."scooters_raw"."users"
+    from "dev_m0z9"."scooters_raw"."users"
     group by sex
 
 )

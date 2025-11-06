@@ -8,11 +8,11 @@
     
   with source_cte as (
     select count(*) as row_count
-    from "dev_h8qz"."dbt"."events_clean"
+    from "dev_m0z9"."dbt"."events_clean"
 ),
 target_cte as (
     select count(*) as row_count
-    from "dev_h8qz"."dbt"."events_full"
+    from "dev_m0z9"."dbt"."events_full"
 )
 select
     'Row count mismatch' as error_message,

@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_h8qz"."dbt"."companies_trips__dbt_tmp"
+  create  table "dev_m0z9"."dbt"."companies_trips__dbt_tmp"
   
   
     as
@@ -13,8 +13,8 @@
         company,
         count(*) as trips
     from
-        "dev_h8qz"."dbt"."trips_prep" as t
-        join "dev_h8qz"."dbt"."scooters" as s
+        "dev_m0z9"."dbt"."trips_prep" as t
+        join "dev_m0z9"."dbt"."scooters" as s
             on t.scooter_hw_id = s.hardware_id
     group by
         1
@@ -26,7 +26,7 @@ select
     t.trips / cast(c.scooters as float) as trips_per_scooter
 from
     trips_cte as t
-    join "dev_h8qz"."dbt"."companies" as c
+    join "dev_m0z9"."dbt"."companies" as c
         using (company)
   );
   

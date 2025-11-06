@@ -34,7 +34,7 @@ select
   
 
 from
-    "dev_h8qz"."dbt"."trips_users"
+    "dev_m0z9"."dbt"."trips_users"
 group by
     1
 order by

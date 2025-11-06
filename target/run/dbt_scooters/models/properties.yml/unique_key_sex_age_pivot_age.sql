@@ -13,7 +13,7 @@ select
     
     ''
 from
-    "dev_h8qz"."dbt"."sex_age_pivot"
+    "dev_m0z9"."dbt"."sex_age_pivot"
 group by
     1
 having

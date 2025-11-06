@@ -1,10 +1,12 @@
 
     
     
-    truncate table "dev_h8qz"."dbt"."event_types";
+    
+    create table "dev_m0z9"."dbt"."event_types" ("type_id" integer,"type" text)
+  ;
     -- dbt seed --
     
-          insert into "dev_h8qz"."dbt"."event_types" ("type_id", "type") values
+          insert into "dev_m0z9"."dbt"."event_types" ("type_id", "type") values
           (%s,%s),(%s,%s),(%s,%s),(%s,%s)
       
 

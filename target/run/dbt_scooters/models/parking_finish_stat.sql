@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_h8qz"."dbt"."parking_finish_stat__dbt_tmp"
+  create  table "dev_m0z9"."dbt"."parking_finish_stat__dbt_tmp"
   
   
     as
@@ -12,7 +12,7 @@
 --     st_transform(hex.geom, 4326) as geom,
 --     count(*) as trips
 -- from
---     "dev_h8qz"."dbt"."trips_geom" as t
+--     "dev_m0z9"."dbt"."trips_geom" as t
 -- cross join
 --     st_hexagongrid(10, st_transform(t.finish_point, 3857)) as hex
 -- where
@@ -25,7 +25,7 @@ select
     st_transform(hex.geom, 4326) as geom,
     count(*) as trips
 from
-    "dev_h8qz"."dbt"."trips_geom"
+    "dev_m0z9"."dbt"."trips_geom"
 cross join
     st_hexagongrid(10, st_transform(finish_point, 3857)) as hex
 where

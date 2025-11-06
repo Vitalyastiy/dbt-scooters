@@ -3,6 +3,6 @@ select
     count(*) as models,
     sum(scooters) as scooters
 from
-    "dev_h8qz"."dbt"."scooters"
+    "dev_m0z9"."dbt"."scooters"
 group by
     1

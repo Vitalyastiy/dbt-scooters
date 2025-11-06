@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_h8qz"."dbt"."book_scooter_retention__dbt_tmp"
+  create  table "dev_m0z9"."dbt"."book_scooter_retention__dbt_tmp"
   
   
     as
@@ -18,7 +18,7 @@
   with  __dbt__cte__events_stream as (
 
   select type as event_type, user_id as user_id, date("timestamp") as event_date
-  from "dev_h8qz"."dbt"."events_full"
+  from "dev_m0z9"."dbt"."events_full"
   where 1 = 1
   
   

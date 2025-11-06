@@ -3,4 +3,4 @@ select
       / cast(count("type" = 'start_search' or null) as float)
       * 100 as cancel_pct
 from
-    "dev_h8qz"."dbt"."events_full"
+    "dev_m0z9"."dbt"."events_full"

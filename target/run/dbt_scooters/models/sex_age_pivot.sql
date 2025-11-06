@@ -2,7 +2,7 @@
   
     
 
-  create  table "dev_h8qz"."dbt"."sex_age_pivot__dbt_tmp"
+  create  table "dev_m0z9"."dbt"."sex_age_pivot__dbt_tmp"
   
   
     as
@@ -44,7 +44,7 @@
   
 
 from
-    "dev_h8qz"."dbt"."trips_users"
+    "dev_m0z9"."dbt"."trips_users"
 group by
     1
 order by

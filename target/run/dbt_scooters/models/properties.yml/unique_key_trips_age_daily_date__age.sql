@@ -15,7 +15,7 @@ select
     
     ''
 from
-    "dev_h8qz"."dbt"."trips_age_daily"
+    "dev_m0z9"."dbt"."trips_age_daily"
 group by
     1
 having

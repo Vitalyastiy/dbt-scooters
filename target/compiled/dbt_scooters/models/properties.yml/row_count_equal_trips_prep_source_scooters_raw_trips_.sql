@@ -5,7 +5,7 @@
         
         count(*) as expression
     from
-        "dev_h8qz"."dbt"."trips_prep"
+        "dev_m0z9"."dbt"."trips_prep"
     
 
     ),
@@ -15,7 +15,7 @@
         
         count(*) * 1 as expression
     from
-        "dev_h8qz"."scooters_raw"."trips"
+        "dev_m0z9"."scooters_raw"."trips"
     
 
     ),
