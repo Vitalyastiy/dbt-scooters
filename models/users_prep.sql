@@ -1,4 +1,3 @@
-  
 select
     id,
     sex,

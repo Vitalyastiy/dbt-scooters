@@ -20,20 +20,26 @@
                             strictly
                             ) %}
 
-{%- if min_value is none and max_value is none -%}
+    {%- if min_value is none and max_value is none -%}
 {{ exceptions.raise_compiler_error(
     "You have to provide either a min_value, max_value or both."
 ) }}
-{%- endif -%}
+    {%- endif -%}
 
-{%- set strict_operator = "" if strictly else "=" -%}
+    {%- set strict_operator = "" if strictly else "=" -%}
 
-{% set expression_min_max %}
+    {% set expression_min_max %}
+        
 ( 1=1
-{%- if min_value is not none %} and {{ expression | trim }} >{{ strict_operator }} {{ min_value }}{% endif %}
-{%- if max_value is not none %} and {{ expression | trim }} <{{ strict_operator }} {{ max_value }}{% endif %}
+        {%- if min_value is not none %}
+             and {{ expression | trim }} >{{ strict_operator }} {{ min_value }}
+        {% endif %}
+    {%- if max_value is not none %}
+             and {{ expression | trim }} <{{ strict_operator }} {{ max_value }}
+        {% endif %}
 )
-{% endset %}
+
+    {% endset %}
 
 {{ dbt_expectations.expression_is_true(model,
                                         expression=expression_min_max,

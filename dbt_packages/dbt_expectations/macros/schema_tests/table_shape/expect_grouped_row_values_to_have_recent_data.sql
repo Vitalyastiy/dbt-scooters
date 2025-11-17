@@ -31,13 +31,13 @@ with latest_grouped_timestamps as (
     where
         -- to exclude erroneous future dates
         cast({{ timestamp_column }} as {{ dbt_expectations.type_timestamp() }}) <= {{ dbt_date.now() }}
-        {% if row_condition %}
+{% if row_condition %}
         and {{ row_condition }}
-        {% endif %}
+{% endif %}
 
-    {% if group_by -%}
-    {{  dbt_expectations.group_by(group_by | length) }}
-    {%- endif %}
+{% if group_by -%}
+    {{ dbt_expectations.group_by(group_by | length) }}
+{%- endif %}
 ),
 total_row_counts as (
 
@@ -48,8 +48,8 @@ total_row_counts as (
     from
         latest_grouped_timestamps
     {% if group_by -%}
-    {{  dbt_expectations.group_by(group_by | length) }}
-    {%- endif %}
+    {{ dbt_expectations.group_by(group_by | length) }}
+{%- endif %}
 
 
 ),

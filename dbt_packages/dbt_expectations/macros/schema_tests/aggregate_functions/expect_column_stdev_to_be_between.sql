@@ -24,7 +24,7 @@
                                                     strictly
                                                     ) %}
 
-{% set expression %}
+    {% set expression %}
 stddev({{ column_name }})
 {% endset %}
 {{ dbt_expectations.expression_between(model,

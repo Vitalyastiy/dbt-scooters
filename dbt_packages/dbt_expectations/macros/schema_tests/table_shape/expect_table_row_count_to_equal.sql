@@ -18,9 +18,9 @@
                                                 group_by,
                                                 row_condition
                                                 ) -%}
-{% set expression %}
+    {% set expression %}
 count(*) = {{ value }}
-{% endset %}
+    {% endset %}
 {{ dbt_expectations.expression_is_true(model,
     expression=expression,
     group_by_columns=group_by,

@@ -10,7 +10,7 @@ with all_values as (
         {{ column_name }} as column_value
 
     from {{ model }}
-    {% if row_condition %}
+{% if row_condition %}
     where {{ row_condition }}
     {% endif %}
 

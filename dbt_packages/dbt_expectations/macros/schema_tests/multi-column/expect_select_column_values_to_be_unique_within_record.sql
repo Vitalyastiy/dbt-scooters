@@ -3,8 +3,8 @@
                                                     quote_columns=False,
                                                     ignore_row_if="all_values_are_missing",
                                                     row_condition=None
-                                                    )  -%}
-    {{ adapter.dispatch('test_expect_select_column_values_to_be_unique_within_record', 'dbt_expectations') (model, column_list, quote_columns, ignore_row_if, row_condition) }}
+                                                    ) -%}
+{{ adapter.dispatch('test_expect_select_column_values_to_be_unique_within_record', 'dbt_expectations') (model, column_list, quote_columns, ignore_row_if, row_condition) }}
 {%- endtest %}
 
 {% macro default__test_expect_select_column_values_to_be_unique_within_record(model,
@@ -17,8 +17,8 @@
 {% if not quote_columns %}
     {%- set columns=column_list %}
 {% elif quote_columns %}
-    {%- set columns=[] %}
-        {% for column in column_list -%}
+{%- set columns=[] %}
+{% for column in column_list -%}
             {% set columns = columns.append( adapter.quote(column) ) %}
         {%- endfor %}
 {% else %}
@@ -29,11 +29,11 @@
 
 {%- set row_condition_ext -%}
 
-    {%- if row_condition  %}
-    {{ row_condition }} and
+{%- if row_condition %}
+{{ row_condition }} and
     {% endif -%}
 
-    {{ dbt_expectations.ignore_row_if_expression(ignore_row_if, columns) }}
+{{ dbt_expectations.ignore_row_if_expression(ignore_row_if, columns) }}
 
 {%- endset -%}
 
@@ -47,7 +47,7 @@ with column_values as (
     from {{ model }}
     where
         1=1
-    {%- if row_condition_ext %}
+{%- if row_condition_ext %}
         and {{ row_condition_ext }}
     {% endif %}
 

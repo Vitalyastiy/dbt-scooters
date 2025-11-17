@@ -7,9 +7,9 @@
                                                             strictly=False
                                                             ) %}
 
-{% set expression %}
-{{ dbt_expectations.percentile_cont(column_name, quantile) }}
-{% endset %}
+    {% set expression %}
+        {{ dbt_expectations.percentile_cont(column_name, quantile) }}
+    {% endset %}
 {{ dbt_expectations.expression_between(model,
                                         expression=expression,
                                         min_value=min_value,

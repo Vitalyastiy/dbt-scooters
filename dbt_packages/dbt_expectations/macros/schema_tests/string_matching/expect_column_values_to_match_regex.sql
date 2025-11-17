@@ -5,9 +5,10 @@
                                                     flags=""
                                                     ) %}
 
-{% set expression %}
-{{ dbt_expectations.regexp_instr(column_name, regex, is_raw=is_raw, flags=flags) }} > 0
-{% endset %}
+    {% set expression %}
+    {{ dbt_expectations.regexp_instr(column_name, regex, is_raw=is_raw, flags=flags) }} > 0
+
+    {% endset %}
 
 {{ dbt_expectations.expression_is_true(model,
                                         expression=expression,

@@ -4,9 +4,9 @@
                                                 group_by=None,
                                                 row_condition=None
                                                 ) %}
-{% set expression %}
+    {% set expression %}
 count(distinct {{ column_name }}) = {{ value }}
-{% endset %}
+    {% endset %}
 {{ dbt_expectations.expression_is_true(model,
                                         expression=expression,
                                         group_by_columns=group_by,

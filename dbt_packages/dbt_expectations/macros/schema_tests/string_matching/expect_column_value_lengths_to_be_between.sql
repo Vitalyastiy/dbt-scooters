@@ -4,9 +4,9 @@
                                                          row_condition=None,
                                                          strictly=False
                                                       ) %}
-{% set expression %}
-{{ dbt.length(column_name) }}
-{% endset %}
+    {% set expression %}
+        {{ dbt.length(column_name) }}
+    {% endset %}
 
 {{ dbt_expectations.expression_between(model,
                                         expression=expression,

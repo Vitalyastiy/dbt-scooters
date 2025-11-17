@@ -6,9 +6,9 @@
                                                     strictly=False
                                                     ) %}
 
-{% set expression %}
-{{ dbt_expectations.median(column_name) }}
-{% endset %}
+    {% set expression %}
+        {{ dbt_expectations.median(column_name) }}
+    {% endset %}
 {{ dbt_expectations.expression_between(model,
                                         expression=expression,
                                         min_value=min_value,

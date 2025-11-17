@@ -25,18 +25,19 @@ with grouped_expression as (
         {% for group_by_column in group_by_columns -%}
         {{ group_by_column }} as col_{{ loop.index }},
         {% endfor -%}
-        {% endif %}
-        {{ dbt_expectations.truth_expression(expression) }}
+    {% endif %}
+    {{ dbt_expectations.truth_expression(expression) }}
     from {{ model }}
-     {%- if row_condition %}
+    {%- if row_condition %}
     where
         {{ row_condition }}
     {% endif %}
     {% if group_by_columns %}
+        
     group by
     {% for group_by_column in group_by_columns -%}
-        {{ group_by_column }}{% if not loop.last %},{% endif %}
-    {% endfor %}
+    {{ group_by_column }}{% if not loop.last %},{% endif %}
+        {% endfor %}
     {% endif %}
 
 ),

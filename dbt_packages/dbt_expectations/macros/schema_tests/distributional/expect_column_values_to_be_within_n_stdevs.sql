@@ -23,9 +23,9 @@ with metric_values as (
         sum({{ column_name }}) as {{ column_name }}
     from
         {{ model }}
-    {% if group_by -%}
-    {{  dbt_expectations.group_by(group_by | length) }}
-    {%- endif %}
+{% if group_by -%}
+    {{ dbt_expectations.group_by(group_by | length) }}
+{%- endif %}
 
 ),
 metric_values_with_statistics as (

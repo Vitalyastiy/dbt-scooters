@@ -36,14 +36,14 @@
                 {% for i in range(n) %}
                     p{{ i }}.generated_number * power(2, {{ i }})
                     {% if not loop.last %} + {% endif %}
-                {% endfor %}
+{% endfor %}
                 + 1 as generated_number
 
             from
 
             {% for i in range(n) %}
                     p as p{{ i }} {% if not loop.last %} cross join {% endif %}
-            {% endfor %}
+{% endfor %}
 
         )
 

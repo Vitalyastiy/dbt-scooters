@@ -1,11 +1,11 @@
 {%- macro _get_metric_expression(metric_column, take_logs) -%}
 
-{%- if take_logs %}
+    {%- if take_logs %}
 {%- set expr = "nullif(" ~ metric_column ~ ", 0)" -%}
 coalesce({{ dbt_expectations.log_natural(expr) }}, 0)
 {%- else -%}
-coalesce({{ metric_column }}, 0)
-{%- endif %}
+        coalesce({{ metric_column }}, 0)
+    {%- endif %}
 
 {%- endmacro -%}
 
@@ -54,10 +54,10 @@ coalesce({{ metric_column }}, 0)
                                   take_logs
                                 ) %}
 
-{%- set sigma_threshold_upper = sigma_threshold_upper if sigma_threshold_upper else sigma_threshold -%}
-{%- set sigma_threshold_lower = sigma_threshold_lower if sigma_threshold_lower else -1 * sigma_threshold -%}
-{%- set partition_by = "partition by " ~ (group_by | join(",")) if group_by -%}
-{%- set group_by_length = (group_by | length ) if group_by else 0 -%}
+    {%- set sigma_threshold_upper = sigma_threshold_upper if sigma_threshold_upper else sigma_threshold -%}
+    {%- set sigma_threshold_lower = sigma_threshold_lower if sigma_threshold_lower else -1 * sigma_threshold -%}
+    {%- set partition_by = "partition by " ~ (group_by | join(",")) if group_by -%}
+    {%- set group_by_length = (group_by | length ) if group_by else 0 -%}
 
 with metric_values as (
 
@@ -69,7 +69,7 @@ with metric_values as (
             sum({{ column_name }}) as agg_metric_value
         from
             {{ model }}
-        {{  dbt_expectations.group_by(1 + group_by_length) }}
+    {{ dbt_expectations.group_by(1 + group_by_length) }}
 
     )
     {%- if take_diffs %}

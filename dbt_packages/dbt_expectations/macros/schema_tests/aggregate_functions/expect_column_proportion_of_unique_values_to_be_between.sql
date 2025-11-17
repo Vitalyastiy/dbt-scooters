@@ -5,7 +5,7 @@
                                                             row_condition=None,
                                                             strictly=False
                                                             ) %}
-{% set expression %}
+    {% set expression %}
 case 
   when count({{ column_name }}) = 0 then 1 -- Return 1 if division by zero
   else cast(count(distinct {{ column_name }}) as {{ dbt.type_float() }})/count({{ column_name }})

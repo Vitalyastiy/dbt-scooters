@@ -4,13 +4,13 @@
                                                 ignore_row_if="all_values_are_missing",
                                                 row_condition=None
                                                 ) %}
-{% if not column_list %}
+    {% if not column_list %}
     {{ exceptions.raise_compiler_error(
         "`column_list` must be specified as a list of columns. Got: '" ~ column_list ~"'.'"
     ) }}
 {% endif %}
 
-{% if not quote_columns %}
+    {% if not quote_columns %}
     {%- set columns=column_list %}
 {% elif quote_columns %}
     {%- set columns=[] %}
@@ -23,15 +23,15 @@
     ) }}
 {% endif %}
 
-{%- set row_condition_ext -%}
+    {%- set row_condition_ext -%}
 
-    {%- if row_condition  %}
-    {{ row_condition }} and
+        {%- if row_condition %}
+        {{ row_condition }} and
     {% endif -%}
 
-    {{ dbt_expectations.ignore_row_if_expression(ignore_row_if, columns) }}
+        {{ dbt_expectations.ignore_row_if_expression(ignore_row_if, columns) }}
 
-{%- endset -%}
+    {%- endset -%}
 
 with validation_errors as (
 
@@ -39,11 +39,11 @@ with validation_errors as (
         {% for column in columns -%}
         {{ column }},
         {%- endfor %}
-        count(*) as {{adapter.quote("n_records")}}
+        count(*) as {{ adapter.quote("n_records") }}
     from {{ model }}
     where
         1=1
-    {%- if row_condition_ext %}
+{%- if row_condition_ext %}
         and {{ row_condition_ext }}
     {% endif %}
     group by
@@ -55,6 +55,5 @@ with validation_errors as (
 )
 select * from validation_errors
 {% endtest %}
-
 
 

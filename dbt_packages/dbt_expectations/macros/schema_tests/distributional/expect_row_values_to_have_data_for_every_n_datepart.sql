@@ -11,13 +11,13 @@
 {% endif %}
 
 {% if not test_start_date or not test_end_date %}
-    {% set sql %}
+{% set sql %}
 
         select
             min(cast({{ date_col }} as date)) as start_{{ date_part }},
             max(cast({{ date_col }} as date)) as end_{{ date_part }}
         from {{ model }}
-        {% if row_condition %}
+{% if row_condition %}
         where {{ row_condition }}
         {% endif %}
 
@@ -51,7 +51,7 @@
 with base_dates as (
 
     {{ dbt_date.get_base_dates(start_date=start_date, end_date=end_date, datepart=date_part) }}
-    {% if interval %}
+{% if interval %}
     {#
         Filter the date spine created above down to the interval granularity using a modulo operation.
         The number of date_parts after the start_date divided by the integer interval will produce no remainder for the desired intervals,
@@ -65,7 +65,7 @@ with base_dates as (
     #}
     where mod(
             cast({{ dbt.datediff("'" ~ start_date ~ "'", 'date_' ~ date_part, date_part) }} as {{ dbt.type_int() }}),
-            cast({{interval}} as {{ dbt.type_int() }})
+            cast({{ interval }} as {{ dbt.type_int() }})
         ) = 0
     {% endif %}
 
@@ -94,7 +94,7 @@ model_data as (
                 cast(" ~ interval ~ " as  " ~ dbt.type_int() ~ " )
             ) * (-1)",
             "cast( " ~ dbt.date_trunc(date_part, date_col) ~ " as  " ~ dbt_expectations.type_datetime() ~ ")"
-        )}} as date_{{ date_part }},
+        ) }} as date_{{ date_part }},
 
     {% endif %}
 
@@ -105,7 +105,7 @@ model_data as (
     where {{ row_condition }}
     {% endif %}
     group by
-        date_{{date_part}}
+        date_{{ date_part }}
 
 ),
 

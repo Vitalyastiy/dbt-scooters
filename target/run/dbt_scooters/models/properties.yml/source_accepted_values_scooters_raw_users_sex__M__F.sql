@@ -1,35 +1,24 @@
+select
+    count(*) as failures,
+    count(*) != 0 as should_warn,
+    count(*) != 0 as should_error
+from (
 
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
+    with all_values as (
 
-with all_values as (
+        select
+            sex as value_field,
+            count(*) as n_records
 
-    select
-        sex as value_field,
-        count(*) as n_records
+        from "dev_m0z9"."scooters_raw"."users"
+        group by sex
 
-    from "dev_m0z9"."scooters_raw"."users"
-    group by sex
+    )
 
-)
+    select *
+    from all_values
+    where value_field not in (
+        'M', 'F'
+    )
 
-select *
-from all_values
-where value_field not in (
-    'M','F'
-)
-
-
-
-  
-  
-      
-    ) dbt_internal_test
+) dbt_internal_test

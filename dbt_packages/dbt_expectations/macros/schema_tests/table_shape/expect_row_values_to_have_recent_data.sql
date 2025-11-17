@@ -13,7 +13,7 @@
 {% endtest %}
 
 {% macro default__test_expect_row_values_to_have_recent_data(model, column_name, datepart, interval, row_condition) %}
-{%- set default_start_date = '1970-01-01' -%}
+    {%- set default_start_date = '1970-01-01' -%}
 with max_recency as (
 
     select max(cast({{ column_name }} as {{ dbt_expectations.type_timestamp() }})) as max_timestamp
@@ -22,9 +22,9 @@ with max_recency as (
     where
         -- to exclude erroneous future dates
         cast({{ column_name }} as {{ dbt_expectations.type_timestamp() }}) <= {{ dbt_date.now() }}
-        {% if row_condition %}
+{% if row_condition %}
         and {{ row_condition }}
-        {% endif %}
+{% endif %}
 )
 select
     *

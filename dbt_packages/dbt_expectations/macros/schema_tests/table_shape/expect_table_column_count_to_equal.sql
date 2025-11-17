@@ -1,5 +1,5 @@
 {%- test expect_table_column_count_to_equal(model, value) -%}
-{%- if execute -%}
+    {%- if execute -%}
 {%- set number_actual_columns = (adapter.get_columns_in_relation(model) | length) -%}
 with test_data as (
 

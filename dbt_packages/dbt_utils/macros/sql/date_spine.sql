@@ -21,8 +21,6 @@
 {%- endmacro %}
 
 
-
-
 {% macro date_spine(datepart, start_date, end_date) %}
     {{ return(adapter.dispatch('date_spine', 'dbt_utils')(datepart, start_date, end_date)) }}
 {%- endmacro %}
@@ -41,9 +39,9 @@ date_spine(
 
 with rawdata as (
 
-    {{dbt_utils.generate_series(
+    {{ dbt_utils.generate_series(
         dbt_utils.get_intervals_between(start_date, end_date, datepart)
-    )}}
+    ) }}
 
 ),
 
@@ -57,7 +55,7 @@ all_periods as (
                 start_date
             )
         }}
-    ) as date_{{datepart}}
+    ) as date_{{ datepart }}
     from rawdata
 
 ),
@@ -66,7 +64,7 @@ filtered as (
 
     select *
     from all_periods
-    where date_{{datepart}} <= {{ end_date }}
+    where date_{{ datepart }} <= {{ end_date }}
 
 )
 

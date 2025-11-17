@@ -4,13 +4,13 @@
 
 {%- macro default__md5(string_value) -%}
 
-  {{ dbt.hash(string_value) }}
+    {{ dbt.hash(string_value) }}
 
 {%- endmacro -%}
 
 
 {%- macro trino__md5(string_value) -%}
 
-  md5(cast({{ string_value }} as varbinary))
+    md5(cast({{ string_value }} as varbinary))
 
 {%- endmacro -%}

@@ -11,7 +11,7 @@ with all_values as (
         {{ column_name }} as value_field
 
     from {{ model }}
-    {% if row_condition %}
+{% if row_condition %}
     where {{ row_condition }}
     {% endif %}
 

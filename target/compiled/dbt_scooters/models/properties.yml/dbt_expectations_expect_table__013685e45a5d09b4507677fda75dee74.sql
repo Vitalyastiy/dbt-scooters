@@ -5,6 +5,7 @@ with test_data as (
         3 as value
 
 )
+
 select *
 from test_data
 where

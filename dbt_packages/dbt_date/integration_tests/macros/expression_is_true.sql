@@ -11,6 +11,7 @@
 {% endtest %}
 
 {% macro default__test_expression_is_true(model, expression, column_name, condition) %}
+    
 
     with meet_condition as (select * from {{ model }} where {{ condition }})
 

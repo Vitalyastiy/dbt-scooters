@@ -1,5 +1,5 @@
 {%- test expect_column_values_to_be_in_type_list(model, column_name, column_type_list) -%}
-{%- if execute -%}
+    {%- if execute -%}
 
     {%- set column_name = column_name | upper -%}
     {%- set columns_in_relation = adapter.get_columns_in_relation(model) -%}

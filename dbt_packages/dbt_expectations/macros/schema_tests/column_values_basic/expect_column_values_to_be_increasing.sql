@@ -5,16 +5,16 @@
                                                    group_by=None,
                                                    step=None) %}
 
-{%- set sort_column = column_name if not sort_column else sort_column -%}
-{%- set operator = ">" if strictly else ">=" -%}
+    {%- set sort_column = column_name if not sort_column else sort_column -%}
+    {%- set operator = ">" if strictly else ">=" -%}
 with all_values as (
 
     select
         {{ sort_column }} as sort_column,
-        {%- if group_by -%}
+    {%- if group_by -%}
         {{ group_by | join(", ") }},
         {%- endif %}
-        {{ column_name }} as value_field
+    {{ column_name }} as value_field
     from {{ model }}
     {% if row_condition %}
     where {{ row_condition }}
@@ -25,16 +25,16 @@ add_lag_values as (
 
     select
         sort_column,
-        {%- if group_by -%}
+    {%- if group_by -%}
         {{ group_by | join(", ") }},
         {%- endif %}
         value_field,
         lag(value_field) over
-            {%- if not group_by -%}
+    {%- if not group_by -%}
                 (order by sort_column)
             {%- else -%}
                 (partition by {{ group_by | join(", ") }} order by sort_column)
-            {%- endif  %} as value_field_lag
+            {%- endif %} as value_field_lag
     from
         all_values
 
@@ -49,7 +49,7 @@ validation_errors as (
         and
         not (
             (value_field {{ operator }} value_field_lag)
-            {%- if step %}
+{%- if step %}
             and ((value_field - value_field_lag) = {{ step }})
             {%- endif %}
         )

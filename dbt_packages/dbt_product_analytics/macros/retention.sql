@@ -1,15 +1,15 @@
 {% macro retention(event_stream=None, first_action=None, second_action=None, start_date=None, end_date=None, periods=[0,1,7,14,30,60,120], period_type='day', group_by=None) %}
-  {% if event_stream is none %}
-    {{ exceptions.raise_compiler_error('parameter \'event_stream\' must be provided')}}
-  {% endif %}
+    {% if event_stream is none %}
+        {{ exceptions.raise_compiler_error('parameter \'event_stream\' must be provided') }}
+    {% endif %}
 
-  {% if first_action is none %}
-    {{ exceptions.raise_compiler_error('parameter \'first_action\' must be provided')}}
-  {% endif %}
+    {% if first_action is none %}
+        {{ exceptions.raise_compiler_error('parameter \'first_action\' must be provided') }}
+    {% endif %}
 
-  {% if second_action is none %}
-    {{ exceptions.raise_compiler_error('parameter \'second_action\' must be provided')}}
-  {% endif %}
+    {% if second_action is none %}
+        {{ exceptions.raise_compiler_error('parameter \'second_action\' must be provided') }}
+{% endif %}
   
   with event_stream as {{ dbt_product_analytics._select_event_stream(event_stream, start_date, end_date) }}
 
@@ -54,11 +54,12 @@
     from first_events
     left join (
       {% for period in periods %}
+        
         select * from secondary_events_{{ period }}
         {% if not loop.last %}
           union all
         {% endif %}
-      {% endfor %}
+{% endfor %}
     ) secondary_events on  1 = 1
     {% if group_by %}
       and first_events.dimension = secondary_events.dimension

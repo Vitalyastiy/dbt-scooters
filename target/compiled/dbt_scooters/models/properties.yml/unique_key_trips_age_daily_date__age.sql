@@ -1,11 +1,10 @@
-
 select
-    
-        "date"::text ||
-    
-        "age"::text ||
-    
-    ''
+
+    "date"::text
+
+    || "age"::text
+
+    || ''
 from
     "dev_m0z9"."dbt"."trips_age_daily"
 group by

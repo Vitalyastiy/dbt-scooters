@@ -1,7 +1,3 @@
-
-    
-    
-
 with all_values as (
 
     select
@@ -16,7 +12,5 @@ with all_values as (
 select *
 from all_values
 where value_field not in (
-    'M','F'
+    'M', 'F'
 )
-
-

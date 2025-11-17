@@ -22,7 +22,7 @@
                                                 row_condition,
                                                 strictly
                                                 ) -%}
-{% set expression %}
+    {% set expression %}
 count(*)
 {% endset %}
 {{ dbt_expectations.expression_between(model,

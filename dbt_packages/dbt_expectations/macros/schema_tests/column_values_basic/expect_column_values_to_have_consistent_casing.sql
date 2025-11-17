@@ -1,4 +1,5 @@
 {% test expect_column_values_to_have_consistent_casing(model, column_name, display_inconsistent_columns=False) %}
+    
 
 with test_data as (
 
@@ -38,4 +39,4 @@ with test_data as (
  where
     set_count != set_count_case_insensitive
  {% endif %}
- {%- endtest -%}
+{%- endtest -%}

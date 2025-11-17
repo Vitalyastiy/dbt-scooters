@@ -1,16 +1,17 @@
+delete from "dev_m0z9"."dbt"."revenue_daily" as DBT_INTERNAL_DEST
+where (DATE) in (
+    select distinct DATE
+    from "revenue_daily__dbt_tmp215251344260" as DBT_INTERNAL_SOURCE
+);
 
-      
-        delete from "dev_m0z9"."dbt"."revenue_daily" as DBT_INTERNAL_DEST
-        where (date) in (
-            select distinct date
-            from "revenue_daily__dbt_tmp192534081040" as DBT_INTERNAL_SOURCE
-        );
 
-    
-
-    insert into "dev_m0z9"."dbt"."revenue_daily" ("revenue_rub", "date", "updated_at")
-    (
-        select "revenue_rub", "date", "updated_at"
-        from "revenue_daily__dbt_tmp192534081040"
-    )
-  
+insert into "dev_m0z9"."dbt"."revenue_daily" (
+    "revenue_rub", "date", "updated_at"
+)
+(
+    select
+        "revenue_rub",
+        "date",
+        "updated_at"
+    from "revenue_daily__dbt_tmp215251344260"
+)

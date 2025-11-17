@@ -1,6 +1,6 @@
 {% test not_empty_string(model, column_name, trim_whitespace=true) %}
 
-  {{ return(adapter.dispatch('test_not_empty_string', 'dbt_utils')(model, column_name, trim_whitespace)) }}
+    {{ return(adapter.dispatch('test_not_empty_string', 'dbt_utils')(model, column_name, trim_whitespace)) }}
 
 {% endtest %}
 

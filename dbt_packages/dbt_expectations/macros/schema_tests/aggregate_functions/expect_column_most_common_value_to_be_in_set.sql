@@ -28,20 +28,20 @@ with value_counts as (
         {% if quote_values -%}
         {{ column_name }}
         {%- else -%}
-        cast({{ column_name }} as {{ data_type }})
-        {%- endif %} as value_field,
+cast({{ column_name }} as {{ data_type }})
+{%- endif %} as value_field,
         count(*) as value_count
 
     from {{ model }}
-    {% if row_condition %}
+{% if row_condition %}
     where {{ row_condition }}
-    {% endif %}
+{% endif %}
 
     group by {% if quote_values -%}
                 {{ column_name }}
             {%- else -%}
-                cast({{ column_name }} as {{ data_type }})
-            {%- endif %}
+    cast({{ column_name }} as {{ data_type }})
+{%- endif %}
 
 ),
 value_counts_ranked as (
@@ -70,10 +70,10 @@ set_values as (
         {% if quote_values -%}
         '{{ value }}'
         {%- else -%}
-        cast({{ value }} as {{ data_type }})
-        {%- endif %} as value_field
+    cast({{ value }} as {{ data_type }})
+{%- endif %} as value_field
     {% if not loop.last %}union all{% endif %}
-    {% endfor %}
+{% endfor %}
 
 ),
 unique_set_values as (

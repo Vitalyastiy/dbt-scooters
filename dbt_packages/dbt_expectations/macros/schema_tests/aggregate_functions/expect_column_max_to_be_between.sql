@@ -5,7 +5,7 @@
                                                 row_condition=None,
                                                 strictly=False
                                                 ) %}
-{% set expression %}
+    {% set expression %}
 max({{ column_name }})
 {% endset %}
 {{ dbt_expectations.expression_between(model,
