@@ -1,4 +1,3 @@
-
 select
     "month",
     count(*) as "users",

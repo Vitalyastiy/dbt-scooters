@@ -47,7 +47,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (0))
+first_event_date + ((interval '1 day') * (0))
 
 
 
@@ -65,7 +65,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (1))
+first_event_date + ((interval '1 day') * (1))
 
 
 
@@ -83,7 +83,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (7))
+first_event_date + ((interval '1 day') * (7))
 
 
 
@@ -101,7 +101,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (14))
+first_event_date + ((interval '1 day') * (14))
 
 
 
@@ -119,7 +119,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (30))
+first_event_date + ((interval '1 day') * (30))
 
 
 
@@ -137,7 +137,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (60))
+first_event_date + ((interval '1 day') * (60))
 
 
 
@@ -155,7 +155,7 @@
     where event_type = 'book_scooter'
     and event_date >= 
 
-    first_event_date + ((interval '1 day') * (120))
+first_event_date + ((interval '1 day') * (120))
 
 
 
