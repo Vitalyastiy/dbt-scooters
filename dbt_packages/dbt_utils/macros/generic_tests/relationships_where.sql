@@ -1,5 +1,5 @@
 {% test relationships_where(model, column_name, to, field, from_condition="1=1", to_condition="1=1") %}
-    {{ return(adapter.dispatch('test_relationships_where', 'dbt_utils')(model, column_name, to, field, from_condition, to_condition)) }}
+  {{ return(adapter.dispatch('test_relationships_where', 'dbt_utils')(model, column_name, to, field, from_condition, to_condition)) }}
 {% endtest %}
 
 {% macro default__test_relationships_where(model, column_name, to, field, from_condition="1=1", to_condition="1=1") %}
@@ -10,24 +10,24 @@
 with left_table as (
 
   select
-    {{ column_name }} as id
+    {{column_name}} as id
 
-  from {{ model }}
+  from {{model}}
 
-  where {{ column_name }} is not null
-    and {{ from_condition }}
+  where {{column_name}} is not null
+    and {{from_condition}}
 
 ),
 
 right_table as (
 
   select
-    {{ field }} as id
+    {{field}} as id
 
-  from {{ to }}
+  from {{to}}
 
-  where {{ field }} is not null
-    and {{ to_condition }}
+  where {{field}} is not null
+    and {{to_condition}}
 
 ),
 

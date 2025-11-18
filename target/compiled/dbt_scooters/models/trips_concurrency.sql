@@ -17,21 +17,23 @@ sum_cte as (
     from
         unnest_cte
     where
-
-        "timestamp"
-        < (date '2023-06-01' + interval '7' hour) at time zone 'Europe/Moscow'
-
+        
+            "timestamp"
+            < (
+                date '2023-06-01' + interval '7' hour
+            ) at time zone 'Europe/Moscow'
+        
     group by
         1
-
+    
 ),
 
 cumsum_cte as (
     -- Integrate increment to get concurrency
     select
         "timestamp",
-        sum(increment) over (order by "timestamp") as concurrency,
-        preserve_row
+        preserve_row,
+        sum(increment) over (order by "timestamp") as concurrency
     from
         sum_cte
 )
@@ -39,7 +41,7 @@ cumsum_cte as (
 select
     "timestamp",
     concurrency,
-
+    
     now() as updated_at
 
 from

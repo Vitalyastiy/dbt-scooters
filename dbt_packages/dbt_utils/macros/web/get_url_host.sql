@@ -22,6 +22,6 @@
     {{ dbt.safe_cast(
         parsed,
         dbt.type_string()
-        ) }}
+        )}}
 
 {%- endmacro %}

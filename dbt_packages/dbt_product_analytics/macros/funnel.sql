@@ -1,11 +1,10 @@
 {% macro funnel(steps=none, event_stream=none, start_date=none, end_date=none) %}
-    {{ return(adapter.dispatch('funnel','dbt_product_analytics')(steps, event_stream, start_date, end_date)) }}
+  {{ return(adapter.dispatch('funnel','dbt_product_analytics')(steps, event_stream, start_date, end_date)) }}
 {% endmacro %}
 
 {% macro default__funnel(steps, event_stream, start_date, end_date) %}
-    
   with event_stream as {{ dbt_product_analytics._select_event_stream(event_stream, start_date, end_date) }}
-{% for step in steps %}
+  {% for step in steps %}
     , event_stream_step_{{ loop.index }} as (
       select event_stream.* 
       from event_stream
@@ -27,13 +26,12 @@
 
   , event_funnel as (
     {% for step in steps %}
-    
       select '{{ step }}' as event_type, unique_users, {{ loop.index }} as step_index
       from step_{{ loop.index }}
-    {% if not loop.last %}
+      {% if not loop.last %}
         union all
       {% endif %}
-{% endfor %}
+    {% endfor %}
   )
 
   , final as (
@@ -47,7 +45,6 @@
 {% endmacro %}
 
 {% macro snowflake__funnel(steps, event_stream, start_date, end_date) %}
-    
   with event_stream as {{ dbt_product_analytics._select_event_stream(event_stream, start_date, end_date) }}
 
   , steps as (
@@ -58,7 +55,7 @@
       {% if not loop.last %}
         union all
       {% endif %}
-{% endfor %}
+    {% endfor %}
   )
   , event_funnel as (
     select event_type, count(distinct user_id) as unique_users
@@ -71,7 +68,7 @@
         define
           {% for step in steps %}
             step_{{ loop.index }} as event_type = '{{ step }}' {% if not loop.last %} , {% endif %}
-    {% endfor %}
+          {% endfor %}
     )
     group by event_type
   )
@@ -90,7 +87,7 @@
 {% endmacro %}
 
 {% macro trino__funnel(steps, event_stream) %}
-    {{ dbt_product_analytics.snowflake__funnel(steps, event_stream) }}
+  {{ dbt_product_analytics.snowflake__funnel(steps, event_stream) }}
 {% endmacro %}
 
 

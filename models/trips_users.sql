@@ -1,4 +1,3 @@
-
 select
     t.*,
     u.sex,

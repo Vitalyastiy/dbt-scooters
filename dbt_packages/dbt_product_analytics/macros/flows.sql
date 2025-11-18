@@ -8,32 +8,24 @@
   end_date=none) 
 %}
 
-    {% if event_stream is none %}
-        {{ exceptions.raise_compiler_error('parameter \'event_stream\' must be provided') }}
-    {% endif %}
+  {% if event_stream is none %}
+    {{ exceptions.raise_compiler_error('parameter \'event_stream\' must be provided')}}
+  {% endif %}
 
-    {% if primary_event is none %}
-        {{ exceptions.raise_compiler_error('parameter \'primary_event\' must be provided') }}
-    {% endif %}  
+  {% if primary_event is none %}
+    {{ exceptions.raise_compiler_error('parameter \'primary_event\' must be provided')}}
+  {% endif %}  
 
   with event_stream as {{ dbt_product_analytics._select_event_stream(event_stream, start_date, end_date) }}
 
   , flow_events as (
     select
       {% if before_or_after == 'after' %} event_type as event_0 {% endif %}
-    {% for i in range(n_events_from) %}
-        {% if before_or_after == 'before' %} 
-            {% set index = n_events_from - i %} 
-        {% else %} 
-            {% set index = i + 1 %} 
-        {% endif %}
-        {% if before_or_after == 'before' %}
-            {% if not loop.first %},{% endif %}lag
-        {% else %}
-            , lead
-        {% endif %}(event_type, {{ index }}) over(partition by user_id order by event_date) as event_{{ index }}
-    {% endfor %}
-{% if before_or_after == 'before' %}, event_type as event_0 {% endif %}
+      {% for i in range(n_events_from) %}
+        {% if before_or_after == 'before' %} {% set index = n_events_from - i %} {% else %} {% set index = i + 1 %} {% endif %}
+        {% if before_or_after == 'before' %}{% if not loop.first %},{% endif %}lag{% else %}, lead{% endif %}(event_type, {{ index }}) over(partition by user_id order by event_date) as event_{{ index }}
+      {% endfor %}
+      {% if before_or_after == 'before' %}, event_type as event_0 {% endif %}
     from event_stream
   )
 

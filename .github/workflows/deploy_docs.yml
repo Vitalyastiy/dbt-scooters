@@ -47,3 +47,8 @@ jobs:
         run: |
           uv sync --locked
           uv run dbt deps
+
+      - name: Run linter
+        run: uv run sqlfluff lint
+        env:
+          DBT_ENV_SECRET_PASSWORD: ${{ secrets.DBT_ENV_SECRET_PASSWORD }}

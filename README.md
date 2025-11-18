@@ -1,6 +1,9 @@
 https://dashboard.render.com/d/dpg-d44vvmre5dus73fdri70-a
 
 
+sqlfluff lint --dialect postgres
+
+
 Welcome to your new dbt project!
 
 ### Using the starter project

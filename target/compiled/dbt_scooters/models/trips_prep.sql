@@ -10,10 +10,10 @@ select
     finish_lon,
     distance as distance_m,
     cast(price as decimal(20, 2)) / 100 as price_rub,
-    extract(epoch from (finished_at - started_at)) duration_s,
+    extract(epoch from (finished_at - started_at)) as duration_s,
     finished_at <> started_at and price = 0 as is_free,
-
+    
     date(started_at at time zone 'Europe/Moscow')
-        as "date"
+ as "date"
 from
     "dev_m0z9"."scooters_raw"."trips"

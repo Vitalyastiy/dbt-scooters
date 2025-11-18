@@ -7,6 +7,7 @@ unnest_cte as (
     from
         {{ source("scooters_raw", "trips") }}
 ),
+
 sum_cte as (
     -- Make timestamp unique, group increments, add initial concurrency from history
     select
@@ -16,11 +17,14 @@ sum_cte as (
     from
         unnest_cte
     where
-    {% if is_incremental() %}
+        {% if is_incremental() %}
         "timestamp" > (select max("timestamp") from {{ this }})
     {% else %}
-        "timestamp" < (date '2023-06-01' + interval '7' hour) at time zone 'Europe/Moscow'
-    {% endif %}
+            "timestamp"
+            < (
+                date '2023-06-01' + interval '7' hour
+            ) at time zone 'Europe/Moscow'
+        {% endif %}
     group by
         1
     {% if is_incremental() %}
@@ -35,15 +39,17 @@ sum_cte as (
         "timestamp" = (select max("timestamp") from {{ this }})
     {% endif %}
 ),
+
 cumsum_cte as (
     -- Integrate increment to get concurrency
     select
         "timestamp",
-        sum(increment) over (order by "timestamp") as concurrency,
-        preserve_row
+        preserve_row,
+        sum(increment) over (order by "timestamp") as concurrency
     from
         sum_cte
 )
+
 select
     "timestamp",
     concurrency,
