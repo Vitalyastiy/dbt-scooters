@@ -6,7 +6,7 @@
     from (
       
     
-  
+    
     
     
 
@@ -21,7 +21,7 @@ having count(*) > 1
 
 
 
+    
   
-  
-      
+    
     ) dbt_internal_test

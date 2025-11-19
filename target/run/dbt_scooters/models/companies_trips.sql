@@ -1,10 +1,10 @@
 
-  
+    
     
 
   create  table "dev_m0z9"."dbt"."companies_trips__dbt_tmp"
-  
-  
+    
+    
     as
   
   (
