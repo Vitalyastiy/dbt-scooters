@@ -50,7 +50,8 @@ models:
       - dbt_utils.expression_is_true:
           arguments:
             expression: "not(users < 1000 or revenue_median < 500)"
-
+  - name: "revenue_daily_stat"
+    description: "Overall daily revenue statistics"
 
 exposures:
   - name: "financial_dashboard"
