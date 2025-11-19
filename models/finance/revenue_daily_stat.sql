@@ -5,3 +5,4 @@ select
     max(updated_at) as updated_at
 from
     {{ ref("revenue_daily") }}
+    
